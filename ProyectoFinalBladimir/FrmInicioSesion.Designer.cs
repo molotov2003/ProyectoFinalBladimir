@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnInicioSesion = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,13 +75,14 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button1
+            // BtnInicioSesion
             // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnInicioSesion.BackColor = System.Drawing.Color.Green;
+            resources.ApplyResources(this.BtnInicioSesion, "BtnInicioSesion");
+            this.BtnInicioSesion.ForeColor = System.Drawing.Color.White;
+            this.BtnInicioSesion.Name = "BtnInicioSesion";
+            this.BtnInicioSesion.UseVisualStyleBackColor = false;
+            this.BtnInicioSesion.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -96,7 +97,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnInicioSesion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
@@ -119,7 +120,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnInicioSesion;
         private System.Windows.Forms.Button button2;
     }
 }

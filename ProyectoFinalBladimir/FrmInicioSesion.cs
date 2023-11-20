@@ -43,7 +43,7 @@ namespace ProyectoFinalBladimir
 
         private void Inicio_sesion_Activated(object sender, EventArgs e)
         {
-            TxtCedula.Focus();
+          
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -73,6 +73,13 @@ namespace ProyectoFinalBladimir
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            this.Hide();
+            inicio.ShowDialog();
         }
     }
 }
