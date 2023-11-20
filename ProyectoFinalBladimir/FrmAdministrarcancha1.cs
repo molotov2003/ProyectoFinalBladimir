@@ -27,5 +27,10 @@ namespace ProyectoFinalBladimir
                 
             }
         }
+
+        private void FrmAdministrarcancha1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,17 +1,23 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoFinalBladimir
 {
+
     public partial class Inicio_sesion : Form
     {
+        ClaseUsuarios ClaseUsuarios = new ClaseUsuarios();
         public Inicio_sesion()
         {
             InitializeComponent();
@@ -24,7 +30,7 @@ namespace ProyectoFinalBladimir
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -43,7 +49,7 @@ namespace ProyectoFinalBladimir
 
         private void Inicio_sesion_Activated(object sender, EventArgs e)
         {
-          
+
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -51,7 +57,7 @@ namespace ProyectoFinalBladimir
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
-               
+
             }
         }
 
@@ -77,9 +83,29 @@ namespace ProyectoFinalBladimir
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Inicio inicio = new Inicio();
-            this.Hide();
-            inicio.ShowDialog();
+            // Realizar la solicitud HTTP GET al servicio de inicio de sesión
+            using (WebClient client = new WebClient())
+            {
+                // Construir la URL con los parámetros de consulta
+                string url = $"http://soccersoft.somee.com/Login?cedula={TxtCedula.Text}&password={Txtpass.Text}";
+
+                // Realizar la solicitud HTTP GET
+                string response = client.DownloadString(url);
+
+                // Procesar la respuesta JSON
+                dynamic jsonResponse = JsonConvert.DeserializeObject(response);
+
+                // Verificar si el inicio de sesión fue exitoso
+                if (jsonResponse != null)
+                {
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.ShowDialog();
+
+
+                }
+
+            }
         }
     }
 }

@@ -37,5 +37,10 @@ namespace ProyectoFinalBladimir
                 
             }
         }
+
+        private void FrmAdministrarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

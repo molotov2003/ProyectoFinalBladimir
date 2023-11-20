@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio_sesion));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtCedula = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txtpass = new System.Windows.Forms.TextBox();
             this.BtnInicioSesion = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,11 +46,11 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // TxtCedula
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            this.TxtCedula.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.TxtCedula, "TxtCedula");
+            this.TxtCedula.Name = "TxtCedula";
             // 
             // label1
             // 
@@ -68,12 +68,12 @@
             this.label2.Name = "label2";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // Txtpass
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Txtpass.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.Txtpass, "Txtpass");
+            this.Txtpass.Name = "Txtpass";
+            this.Txtpass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // BtnInicioSesion
             // 
@@ -99,9 +99,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnInicioSesion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Txtpass);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtCedula);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Inicio_sesion";
@@ -116,10 +116,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtCedula;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txtpass;
         private System.Windows.Forms.Button BtnInicioSesion;
         private System.Windows.Forms.Button button2;
     }
