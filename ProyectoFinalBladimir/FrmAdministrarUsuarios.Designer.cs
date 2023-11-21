@@ -159,6 +159,7 @@
             this.BtnAgregar.TabIndex = 60;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label7
             // 

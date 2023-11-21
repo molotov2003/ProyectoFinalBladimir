@@ -35,10 +35,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.DGVCanchas = new System.Windows.Forms.DataGridView();
-            this.NombreCancha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disponibilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).BeginInit();
@@ -65,6 +61,7 @@
             this.BtnEliminar.TabIndex = 25;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
@@ -75,6 +72,7 @@
             this.BtnEditar.TabIndex = 24;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // button2
             // 
@@ -85,6 +83,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Cambiar Disponibilidad";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // BtnAgregar
             // 
@@ -95,49 +94,20 @@
             this.BtnAgregar.TabIndex = 22;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // DGVCanchas
             // 
+            this.DGVCanchas.AllowUserToAddRows = false;
+            this.DGVCanchas.AllowUserToDeleteRows = false;
             this.DGVCanchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCanchas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreCancha,
-            this.Descripcion,
-            this.Precio,
-            this.Disponibilidad});
             this.DGVCanchas.Location = new System.Drawing.Point(54, 215);
             this.DGVCanchas.Name = "DGVCanchas";
+            this.DGVCanchas.ReadOnly = true;
             this.DGVCanchas.RowHeadersWidth = 51;
             this.DGVCanchas.RowTemplate.Height = 24;
             this.DGVCanchas.Size = new System.Drawing.Size(769, 380);
             this.DGVCanchas.TabIndex = 21;
-            // 
-            // NombreCancha
-            // 
-            this.NombreCancha.HeaderText = "Nombre Cancha";
-            this.NombreCancha.MinimumWidth = 20;
-            this.NombreCancha.Name = "NombreCancha";
-            this.NombreCancha.Width = 190;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 220;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 180;
-            // 
-            // Disponibilidad
-            // 
-            this.Disponibilidad.HeaderText = "Disponibilidad";
-            this.Disponibilidad.MinimumWidth = 6;
-            this.Disponibilidad.Name = "Disponibilidad";
-            this.Disponibilidad.Width = 125;
             // 
             // label2
             // 
@@ -197,10 +167,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.DataGridView DGVCanchas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCancha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibilidad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

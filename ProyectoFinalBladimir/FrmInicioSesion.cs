@@ -104,6 +104,10 @@ namespace ProyectoFinalBladimir
 
 
                 }
+                else
+                {
+                    MessageBox.Show("Usuario o contrasena incorrecta");
+                }
 
             }
         }

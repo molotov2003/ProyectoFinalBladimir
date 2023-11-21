@@ -32,15 +32,11 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.DGVCanchas = new System.Windows.Forms.DataGridView();
-            this.NombreCancha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disponibilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGVClientes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +49,7 @@
             this.BtnEliminar.TabIndex = 15;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
@@ -63,6 +60,7 @@
             this.BtnEditar.TabIndex = 14;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnAgregar
             // 
@@ -73,49 +71,22 @@
             this.BtnAgregar.TabIndex = 12;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // DGVCanchas
+            // DGVClientes
             // 
-            this.DGVCanchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCanchas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreCancha,
-            this.Descripcion,
-            this.Precio,
-            this.Disponibilidad});
-            this.DGVCanchas.Location = new System.Drawing.Point(57, 262);
-            this.DGVCanchas.Name = "DGVCanchas";
-            this.DGVCanchas.RowHeadersWidth = 51;
-            this.DGVCanchas.RowTemplate.Height = 24;
-            this.DGVCanchas.Size = new System.Drawing.Size(769, 380);
-            this.DGVCanchas.TabIndex = 11;
-            // 
-            // NombreCancha
-            // 
-            this.NombreCancha.HeaderText = "Cedula";
-            this.NombreCancha.MinimumWidth = 20;
-            this.NombreCancha.Name = "NombreCancha";
-            this.NombreCancha.Width = 190;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Nombre";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 220;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Apellidos";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 180;
-            // 
-            // Disponibilidad
-            // 
-            this.Disponibilidad.HeaderText = "Telefono";
-            this.Disponibilidad.MinimumWidth = 6;
-            this.Disponibilidad.Name = "Disponibilidad";
-            this.Disponibilidad.Width = 125;
+            this.DGVClientes.AllowUserToAddRows = false;
+            this.DGVClientes.AllowUserToDeleteRows = false;
+            this.DGVClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGVClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGVClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVClientes.Location = new System.Drawing.Point(192, 260);
+            this.DGVClientes.Name = "DGVClientes";
+            this.DGVClientes.ReadOnly = true;
+            this.DGVClientes.RowHeadersWidth = 51;
+            this.DGVClientes.RowTemplate.Height = 24;
+            this.DGVClientes.Size = new System.Drawing.Size(514, 380);
+            this.DGVClientes.TabIndex = 11;
             // 
             // label2
             // 
@@ -163,14 +134,15 @@
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.DGVCanchas);
+            this.Controls.Add(this.DGVClientes);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAdministrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).EndInit();
+            this.Load += new System.EventHandler(this.FrmAdministrarCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,12 +154,8 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.DataGridView DGVCanchas;
+        private System.Windows.Forms.DataGridView DGVClientes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCancha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibilidad;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

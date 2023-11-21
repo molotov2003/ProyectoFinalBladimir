@@ -12,31 +12,19 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalBladimir
 {
-    public partial class FrmAgregarCliente3 : Form
+    public partial class FrmAgregarCancha : Form
     {
-        public FrmAgregarCliente3()
+        public FrmAgregarCancha()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                FrmAdministrarCliente frmAdministrarCliente = new FrmAdministrarCliente();
-                this.Hide();
-                frmAdministrarCliente.ShowDialog();
-                
-            }
-        }
-
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-
             try
             {
                 // Validar si los campos de usuario y contraseña están llenos
-                if ( Txtpass.Text.Length > 0 && TxtNombre.Text.Length > 0 && TxtApellido.Text.Length > 0 && TxtTelefono.Text.Length > 0)
+                if (TxtNombreCancha.Text.Length > 0 && Txtdes.Text.Length > 0 && Txtimagen.Text.Length > 0 && Txtprecio.Text.Length > 0 && Txtdis.Text  .Length > 0)
                 {
 
                     // Realizar la solicitud HTTP POST al servicio de inicio de sesión
@@ -45,31 +33,32 @@ namespace ProyectoFinalBladimir
 
 
                         // Realizar la solicitud HTTP POST
-                        string response = client.UploadString("http://soccersoft.somee.com/CrearCliente/?telefono="+Convert.ToInt64(TxtTelefono.Text)+"&password="+Txtpass.Text+"&nombres="+TxtNombre.Text+"&apellidos="+TxtApellido.Text, "POST");
+                        string response = client.UploadString("http://soccersoft.somee.com/CrearCancha?nombreCancha="+TxtNombreCancha.Text+"&descripcionCancha="+Txtdes.Text+"&imagen="+Txtimagen.Text+"&precio="+Convert.ToInt64(Txtprecio.Text)+"&disponibilidad="+Convert.ToInt64(Txtdis.Text),"POST");
 
                         // Procesar la respuesta JSON
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
 
-                        
+
                         if (jsonResponse != null)
                         {
 
                             MessageBox.Show("Se ha agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            FrmAdministrarCliente frmAdministrarCliente = new FrmAdministrarCliente();
+                            FrmAdministrarcancha1 f = new FrmAdministrarcancha1();
                             this.Hide();
-                            frmAdministrarCliente.ShowDialog();
+                            f.ShowDialog();
+                           
 
                         }
                         else
                         {
-                           
+
                             MessageBox.Show(". Verifica tus credenciales.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
-               
+
             }
-            catch(WarningException ex)
+            catch (WarningException ex)
             {
                 MessageBox.Show("debe llenar todos los campos");
             }

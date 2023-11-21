@@ -94,6 +94,24 @@
     <Compile Include="FrmAdministrarcancha1.Designer.cs">
       <DependentUpon>FrmAdministrarcancha1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAgregarCancha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarCancha.Designer.cs">
+      <DependentUpon>FrmAgregarCancha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarUsuario.Designer.cs">
+      <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarCliente.Designer.cs">
+      <DependentUpon>FrmEditarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdministrarcancha1.resx">
       <DependentUpon>FrmAdministrarcancha1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarCancha.resx">
+      <DependentUpon>FrmAgregarCancha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarUsuario.resx">
+      <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarCliente.resx">
+      <DependentUpon>FrmEditarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicioSesion.resx">
       <DependentUpon>FrmInicioSesion.cs</DependentUpon>
