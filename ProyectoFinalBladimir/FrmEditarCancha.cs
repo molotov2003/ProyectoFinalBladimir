@@ -12,19 +12,19 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalBladimir
 {
-    public partial class FrmEditarCliente : Form
+    public partial class FrmEditarCancha : Form
     {
-        public FrmEditarCliente()
+        public FrmEditarCancha()
         {
             InitializeComponent();
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void AgregarCancha_Click(object sender, EventArgs e)
         {
             try
             {
                 // Validar si los campos de usuario y contraseña están llenos
-                if (TxtTelefono.Text.Length > 0 && Txtpass.Text.Length > 0 && TxtNombre.Text.Length > 0 && TxtApellido.Text.Length > 0 )
+                if (TxtNombreCancha.Text.Length > 0 && Txtdes.Text.Length > 0 && Txtimagen.Text.Length > 0 && Txtprecio.Text.Length > 0 && Txtdis.Text.Length > 0)
                 {
 
                     // Realizar la solicitud HTTP POST al servicio de inicio de sesión
@@ -33,7 +33,7 @@ namespace ProyectoFinalBladimir
 
 
                         // Realizar la solicitud HTTP POST
-                        string response = client.UploadString("http://soccersoft.somee.com/EditarCliente?telefono=" + TxtTelefono.Text+ "&password=" + Txtpass.Text+ "&nombres=" + TxtNombre.Text+ "&apellidos=" + TxtApellido.Text, "PUT" , "");
+                        string response = client.UploadString("http://soccersoft.somee.com/EditarCancha?idCancha=" + TxtIdcancha.Text+ "&nombreCancha=" + TxtNombreCancha.Text+ "&descripcionCancha=" + Txtdes.Text+ "&imagen=" + Txtimagen.Text+ "&precio=" + Txtimagen.Text+ "&disponibilidad=" + Txtdis.Text, "PUT", "");
 
                         // Procesar la respuesta JSON
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
@@ -66,17 +66,11 @@ namespace ProyectoFinalBladimir
             {
                 MessageBox.Show("debe llenar todos los campos");
             }
-           
-        }
-
-        private void TxtTelefono_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAdministrarCliente f = new FrmAdministrarCliente();
+            FrmAdministrarcancha1 f = new FrmAdministrarcancha1();
             this.Hide();
             f.ShowDialog();
         }

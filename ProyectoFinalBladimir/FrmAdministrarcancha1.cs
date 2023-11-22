@@ -64,7 +64,14 @@ namespace ProyectoFinalBladimir
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-
+            FrmEditarCancha f = new FrmEditarCancha();
+            f.TxtIdcancha.Text = DGVCanchas.CurrentRow.Cells["idCanchas"].Value.ToString();
+            f.TxtNombreCancha.Text = DGVCanchas.CurrentRow.Cells["nombreCancha"].Value.ToString();
+            f.Txtdes.Text = DGVCanchas.CurrentRow.Cells["descripcionCancha"].Value.ToString();
+            f.Txtimagen.Text = DGVCanchas.CurrentRow.Cells["imagen"].Value.ToString();
+            f.Txtprecio.Text = DGVCanchas.CurrentRow.Cells["precio"].Value.ToString();
+            f.Txtdis.Text = DGVCanchas.CurrentRow.Cells["disponibilidad"].Value.ToString();
+            f.ShowDialog();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

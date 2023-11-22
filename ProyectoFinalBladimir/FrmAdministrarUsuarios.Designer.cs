@@ -69,6 +69,7 @@
             this.BtnEditar.TabIndex = 58;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnEliminar
             // 

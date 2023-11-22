@@ -16,5 +16,4 @@ namespace ProyectoFinalBladimir
             public int cedula { get; set; }
             public string password { get; set; }
         }
-
 }

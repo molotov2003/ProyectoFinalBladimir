@@ -12,19 +12,19 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalBladimir
 {
-    public partial class FrmEditarCliente : Form
+    public partial class FrmEditarUsuario : Form
     {
-        public FrmEditarCliente()
+        public FrmEditarUsuario()
         {
             InitializeComponent();
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
                 // Validar si los campos de usuario y contraseña están llenos
-                if (TxtTelefono.Text.Length > 0 && Txtpass.Text.Length > 0 && TxtNombre.Text.Length > 0 && TxtApellido.Text.Length > 0 )
+                if (TxtCedula.Text.Length > 0 && Txtpass.Text.Length > 0 && TxtNombre.Text.Length > 0 && TxtApellido.Text.Length > 0 && TxtTelefono.Text.Length > 0 && CbxRol.Text.Length>0)
                 {
 
                     // Realizar la solicitud HTTP POST al servicio de inicio de sesión
@@ -33,7 +33,7 @@ namespace ProyectoFinalBladimir
 
 
                         // Realizar la solicitud HTTP POST
-                        string response = client.UploadString("http://soccersoft.somee.com/EditarCliente?telefono=" + TxtTelefono.Text+ "&password=" + Txtpass.Text+ "&nombres=" + TxtNombre.Text+ "&apellidos=" + TxtApellido.Text, "PUT" , "");
+                        string response = client.UploadString("http://soccersoft.somee.com/EditarUsuario?cedula="+TxtCedula.Text+"&password="+Txtpass.Text+"&nombres="+TxtNombre.Text+"&apellidos="+TxtApellido.Text+"&telefono="+TxtTelefono.Text+"&rol="+CbxRol.Text, "PUT" , "");
 
                         // Procesar la respuesta JSON
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
@@ -43,7 +43,7 @@ namespace ProyectoFinalBladimir
                         {
 
                             MessageBox.Show("Se ha editado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            FrmAdministrarCliente f = new FrmAdministrarCliente();
+                            FrmAdministrarUsuarios f = new FrmAdministrarUsuarios();
                             this.Hide();
                             f.ShowDialog();
                             this.Hide();
@@ -64,19 +64,13 @@ namespace ProyectoFinalBladimir
             }
             catch (Exception ex)
             {
-                MessageBox.Show("debe llenar todos los campos");
+                MessageBox.Show("ha ocurrido un error");
             }
-           
         }
 
-        private void TxtTelefono_TextChanged(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmAdministrarCliente f = new FrmAdministrarCliente();
+            FrmAdministrarUsuarios f = new FrmAdministrarUsuarios();
             this.Hide();
             f.ShowDialog();
         }

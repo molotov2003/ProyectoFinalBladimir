@@ -98,5 +98,20 @@ namespace ProyectoFinalBladimir
                
             }
         }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            FrmEditarUsuario f = new FrmEditarUsuario();
+
+            f.TxtCedula.Text = DGVUsuarios.CurrentRow.Cells["cedula"].Value.ToString();
+            //desencripto la contraseña
+            string passdes = ClaseUser.DesEncriptar(DGVUsuarios.CurrentRow.Cells["password"].Value.ToString());
+            f.Txtpass.Text = passdes;
+            f.TxtNombre.Text = DGVUsuarios.CurrentRow.Cells["nombres"].Value.ToString();
+            f.TxtApellido.Text = DGVUsuarios.CurrentRow.Cells["apellidos"].Value.ToString();
+            f.TxtTelefono.Text = DGVUsuarios.CurrentRow.Cells["telefono"].Value.ToString();
+            f.CbxRol.Text = DGVUsuarios.CurrentRow.Cells["rol"].Value.ToString();
+            f.ShowDialog();
+        }
     }
 }

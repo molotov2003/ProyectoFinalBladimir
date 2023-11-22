@@ -58,7 +58,13 @@ namespace ProyectoFinalBladimir
         private void BtnEditar_Click(object sender, EventArgs e)
         {
            FrmEditarCliente f = new FrmEditarCliente();
-           
+           f.TxtTelefono.Text = DGVClientes.CurrentRow.Cells["telefonoClientes"].Value.ToString();
+           string passdes = ClaseUser.DesEncriptar(DGVClientes.CurrentRow.Cells["password"].Value.ToString());
+           f.Txtpass.Text = passdes;
+           f.TxtNombre.Text = DGVClientes.CurrentRow.Cells["nombres"].Value.ToString();       
+           f.TxtApellido.Text = DGVClientes.CurrentRow.Cells["apellidos"].Value.ToString();
+           f.ShowDialog();
+
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
