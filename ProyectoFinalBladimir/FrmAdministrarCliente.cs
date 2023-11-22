@@ -57,19 +57,13 @@ namespace ProyectoFinalBladimir
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            FrmEditarCliente f = new FrmEditarCliente();
-            //f.TxtTelefono.Text = DGVClientes.CurrentRow.Cells["telefonoClientes"].Value.ToString();
-            //f.TxtUsuario.Text = DGVClientes.CurrentRow.Cells["password"].Value.ToString();
-            //f.TxtNombres.Text = DGVClientes.CurrentRow.Cells["nombres"].Value.ToString();
-            //f.TxtApellido.Text= DGVClientes.CurrentRow.Cells["apellidos"].Value.ToString();
-            f.ShowDialog();
+           FrmEditarCliente f = new FrmEditarCliente();
+           
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             string idcliente = DGVClientes.CurrentRow.Cells["telefonoClientes"].Value.ToString();
-            MessageBox.Show("has seleccionado el id" + idcliente);
-
             using (WebClient client = new WebClient())
             {
                 // Construir la URL con los parámetros de consulta
@@ -78,23 +72,22 @@ namespace ProyectoFinalBladimir
 
                 // Realizar la solicitud HTTP DELETE
                 dynamic jsonResponse = JsonConvert.DeserializeObject(response);
-
-
-                // Verificar si el inicio de sesión fue exitoso
-                if (jsonResponse != null)
+                DialogResult rpta = new DialogResult();
+                rpta = MessageBox.Show("Desea Eliminar el cliente: " + idcliente, "Advertencia!!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rpta == DialogResult.OK)
                 {
-                    
-                    MessageBox.Show("Se ha eliminado correctamente");
+                    // Verificar si el inicio de sesión fue exitoso
+                    if (jsonResponse != null)
+                    {
 
+                        MessageBox.Show("Se ha eliminado correctamente");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error");
-                }
-
-
-
-
             }
         }
     }

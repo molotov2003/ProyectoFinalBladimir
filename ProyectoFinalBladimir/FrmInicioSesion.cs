@@ -18,6 +18,8 @@ namespace ProyectoFinalBladimir
     public partial class Inicio_sesion : Form
     {
         ClaseUsuarios ClaseUsuarios = new ClaseUsuarios();
+
+        public static string excepcion = "Usuario o contrfffffffffffaseña incorrecta";
         public Inicio_sesion()
         {
             InitializeComponent();
@@ -96,17 +98,18 @@ namespace ProyectoFinalBladimir
                 dynamic jsonResponse = JsonConvert.DeserializeObject(response);
 
                 // Verificar si el inicio de sesión fue exitoso
-                if (jsonResponse != null)
+                if (jsonResponse[0].id == 200)
                 {
+                    
                     Inicio inicio = new Inicio();
                     this.Hide();
                     inicio.ShowDialog();
-
+                    
 
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contrasena incorrecta");
+                    MessageBox.Show("Error: Usuario o contraseña incorrecta" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

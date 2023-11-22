@@ -39,7 +39,7 @@ namespace ProyectoFinalBladimir
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
 
 
-                        if (jsonResponse != null)
+                        if (jsonResponse[0].id == 200)
                         {
 
                             MessageBox.Show("Se ha agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,7 +52,7 @@ namespace ProyectoFinalBladimir
                         else
                         {
 
-                            MessageBox.Show(". Verifica tus credenciales.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Verifica tus credenciales.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

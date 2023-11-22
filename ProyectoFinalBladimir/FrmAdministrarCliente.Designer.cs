@@ -32,12 +32,12 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.DGVClientes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVClientes)).BeginInit();
+            this.DGVClientes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnEliminar
@@ -72,21 +72,6 @@
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // DGVClientes
-            // 
-            this.DGVClientes.AllowUserToAddRows = false;
-            this.DGVClientes.AllowUserToDeleteRows = false;
-            this.DGVClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGVClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DGVClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVClientes.Location = new System.Drawing.Point(192, 260);
-            this.DGVClientes.Name = "DGVClientes";
-            this.DGVClientes.ReadOnly = true;
-            this.DGVClientes.RowHeadersWidth = 51;
-            this.DGVClientes.RowTemplate.Height = 24;
-            this.DGVClientes.Size = new System.Drawing.Size(514, 380);
-            this.DGVClientes.TabIndex = 11;
             // 
             // label2
             // 
@@ -123,6 +108,21 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
+            // DGVClientes
+            // 
+            this.DGVClientes.AllowUserToAddRows = false;
+            this.DGVClientes.AllowUserToDeleteRows = false;
+            this.DGVClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGVClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGVClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVClientes.Location = new System.Drawing.Point(72, 258);
+            this.DGVClientes.Name = "DGVClientes";
+            this.DGVClientes.ReadOnly = true;
+            this.DGVClientes.RowHeadersWidth = 51;
+            this.DGVClientes.RowTemplate.Height = 24;
+            this.DGVClientes.Size = new System.Drawing.Size(679, 380);
+            this.DGVClientes.TabIndex = 11;
+            // 
             // FrmAdministrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,8 +142,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Cliente";
             this.Load += new System.EventHandler(this.FrmAdministrarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,9 +154,9 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.DataGridView DGVClientes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView DGVClientes;
     }
 }

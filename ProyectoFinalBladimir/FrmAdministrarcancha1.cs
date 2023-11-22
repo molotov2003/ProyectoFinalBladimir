@@ -81,22 +81,23 @@ namespace ProyectoFinalBladimir
                 // Realizar la solicitud HTTP DELETE
                 dynamic jsonResponse = JsonConvert.DeserializeObject(response);
 
+                DialogResult rpta = new DialogResult();
+                rpta = MessageBox.Show("Desea Eliminar la cancha: " + idcancha, "Advertencia!!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 // Verificar si el inicio de sesión fue exitoso
-                if (jsonResponse != null)
+                if (rpta == DialogResult.OK)
                 {
+                    if (jsonResponse[0].id == 200)
+                    {
 
-                    MessageBox.Show("Se ha eliminado correctamente");
+                        MessageBox.Show("Se ha eliminado correctamente");
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error");
-                }
-
-
-
-
             }
         }
     }
