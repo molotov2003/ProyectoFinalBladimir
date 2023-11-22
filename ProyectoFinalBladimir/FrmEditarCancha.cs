@@ -24,7 +24,7 @@ namespace ProyectoFinalBladimir
             try
             {
                 // Validar si los campos de usuario y contraseña están llenos
-                if (TxtNombreCancha.Text.Length > 0 && Txtdes.Text.Length > 0 && Txtimagen.Text.Length > 0 && Txtprecio.Text.Length > 0 && Txtdis.Text.Length > 0)
+                if (TxtNombreCancha.Text.Length > 0 && Txtdes.Text.Length > 0 && Txtimagen.Text.Length > 0 && Txtprecio.Text.Length > 0 && CbxRol.Text.Length > 0)
                 {
 
                     // Realizar la solicitud HTTP POST al servicio de inicio de sesión
@@ -33,7 +33,7 @@ namespace ProyectoFinalBladimir
 
 
                         // Realizar la solicitud HTTP POST
-                        string response = client.UploadString("http://soccersoft.somee.com/EditarCancha?idCancha=" + TxtIdcancha.Text+ "&nombreCancha=" + TxtNombreCancha.Text+ "&descripcionCancha=" + Txtdes.Text+ "&imagen=" + Txtimagen.Text+ "&precio=" + Txtimagen.Text+ "&disponibilidad=" + Txtdis.Text, "PUT", "");
+                        string response = client.UploadString("http://soccersoft.somee.com/EditarCancha?idCancha=" + TxtIdcancha.Text + "&nombreCancha=" + TxtNombreCancha.Text + "&descripcionCancha=" + Txtdes.Text + "&imagen=" + Txtimagen.Text + "&precio=" + Txtprecio.Text + "&disponibilidad=" + CbxRol.Text, "PUT", "");
 
                         // Procesar la respuesta JSON
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
@@ -43,7 +43,7 @@ namespace ProyectoFinalBladimir
                         {
 
                             MessageBox.Show("Se ha editado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            FrmAdministrarCliente f = new FrmAdministrarCliente();
+                            FrmAdministrarcancha1 f = new FrmAdministrarcancha1();
                             this.Hide();
                             f.ShowDialog();
                             this.Hide();

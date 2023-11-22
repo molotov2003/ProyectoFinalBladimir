@@ -52,6 +52,7 @@ namespace ProyectoFinalBladimir
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            //abro el el formulario para aregar la cancha
             FrmAgregarCancha f = new FrmAgregarCancha();
             f.ShowDialog();
 
@@ -64,18 +65,22 @@ namespace ProyectoFinalBladimir
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            //llamo el formulario para editar y capturo todas las variables de la cancha seleccionada
             FrmEditarCancha f = new FrmEditarCancha();
             f.TxtIdcancha.Text = DGVCanchas.CurrentRow.Cells["idCanchas"].Value.ToString();
             f.TxtNombreCancha.Text = DGVCanchas.CurrentRow.Cells["nombreCancha"].Value.ToString();
             f.Txtdes.Text = DGVCanchas.CurrentRow.Cells["descripcionCancha"].Value.ToString();
             f.Txtimagen.Text = DGVCanchas.CurrentRow.Cells["imagen"].Value.ToString();
             f.Txtprecio.Text = DGVCanchas.CurrentRow.Cells["precio"].Value.ToString();
-            f.Txtdis.Text = DGVCanchas.CurrentRow.Cells["disponibilidad"].Value.ToString();
+            f.CbxRol.Text = DGVCanchas.CurrentRow.Cells["disponibilidad"].Value.ToString();
             f.ShowDialog();
         }
 
+
+      
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            //capturo el id de la cancha en el datagrid
             string idcancha = DGVCanchas.CurrentRow.Cells["idCanchas"].Value.ToString();
             MessageBox.Show("has seleccionado el id" + idcancha);
 
