@@ -181,12 +181,13 @@
             // 
             this.CbxRol.FormattingEnabled = true;
             this.CbxRol.Items.AddRange(new object[] {
-            "0",
+            "0,",
             "1"});
             this.CbxRol.Location = new System.Drawing.Point(287, 302);
             this.CbxRol.Name = "CbxRol";
             this.CbxRol.Size = new System.Drawing.Size(238, 24);
             this.CbxRol.TabIndex = 71;
+            this.CbxRol.SelectedIndexChanged += new System.EventHandler(this.CbxRol_SelectedIndexChanged);
             // 
             // FrmEditarUsuario
             // 

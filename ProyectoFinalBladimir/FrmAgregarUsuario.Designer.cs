@@ -41,10 +41,10 @@
             this.TxtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtRol = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cbxrol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,13 +153,7 @@
             this.label5.Size = new System.Drawing.Size(28, 16);
             this.label5.TabIndex = 51;
             this.label5.Text = "Rol";
-            // 
-            // TxtRol
-            // 
-            this.TxtRol.Location = new System.Drawing.Point(285, 302);
-            this.TxtRol.Name = "TxtRol";
-            this.TxtRol.Size = new System.Drawing.Size(238, 22);
-            this.TxtRol.TabIndex = 50;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // BtnAgregar
             // 
@@ -194,17 +188,28 @@
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             // 
+            // cbxrol
+            // 
+            this.cbxrol.FormattingEnabled = true;
+            this.cbxrol.Items.AddRange(new object[] {
+            "0,",
+            "1"});
+            this.cbxrol.Location = new System.Drawing.Point(285, 300);
+            this.cbxrol.Name = "cbxrol";
+            this.cbxrol.Size = new System.Drawing.Size(238, 24);
+            this.cbxrol.TabIndex = 55;
+            // 
             // FrmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxrol);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TxtRol);
             this.Controls.Add(this.TxtCedula);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
@@ -239,9 +244,9 @@
         private System.Windows.Forms.TextBox TxtCedula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtRol;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox cbxrol;
     }
 }

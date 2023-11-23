@@ -74,5 +74,10 @@ namespace ProyectoFinalBladimir
             this.Hide();
             f.ShowDialog();
         }
+
+        private void CbxRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

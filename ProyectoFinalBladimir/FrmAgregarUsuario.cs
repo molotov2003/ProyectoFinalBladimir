@@ -30,7 +30,7 @@ namespace ProyectoFinalBladimir
             try
             {
                 // Validar si los campos de usuario y contraseña están llenos
-                if ( TxtCedula.Text.Length > 0 &&  Txtpass.Text.Length > 0 && TxtNombre.Text.Length > 0 && TxtApellido.Text.Length > 0 && TxtTelefono.Text.Length > 0 && TxtRol.Text.Length > 0)
+                if ( TxtCedula.Text.Length > 0 &&  Txtpass.Text.Length > 0 && TxtNombre.Text.Length > 0 && TxtApellido.Text.Length > 0 && TxtTelefono.Text.Length > 0 && cbxrol.Text.Length > 0)
                 {
 
                     // Realizar la solicitud HTTP POST al servicio de inicio de sesión
@@ -39,7 +39,7 @@ namespace ProyectoFinalBladimir
 
 
                         // Realizar la solicitud HTTP POST
-                        string response = client.UploadString("http://soccersoft.somee.com/CrearUsuario/?cedula="+TxtCedula.Text+"&password="+Txtpass.Text+"&nombres="+TxtNombre.Text+"&apellidos="+TxtApellido.Text+"&telefono="+TxtTelefono.Text+"&rol="+TxtRol.Text+"", "POST");
+                        string response = client.UploadString("http://soccersoft.somee.com/CrearUsuario/?cedula="+TxtCedula.Text+"&password="+Txtpass.Text+"&nombres="+TxtNombre.Text+"&apellidos="+TxtApellido.Text+"&telefono="+TxtTelefono.Text+"&rol="+cbxrol.Text+"", "POST");
 
                         // Procesar la respuesta JSON
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
@@ -71,6 +71,11 @@ namespace ProyectoFinalBladimir
             {
                 MessageBox.Show("debe llenar todos los campos");
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

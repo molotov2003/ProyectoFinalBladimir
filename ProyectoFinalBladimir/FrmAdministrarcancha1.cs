@@ -29,7 +29,21 @@ namespace ProyectoFinalBladimir
                 
             }
         }
+        private void ActualizarDGV()
+        {
+            using (WebClient client = new WebClient())
+            {
+                // Construir la URL con los parámetros de consulta
+                string url = $"http://soccersoft.somee.com/ListarCanchas";
 
+                // Realizar la solicitud HTTP GET
+                string response = client.DownloadString(url);
+
+                // Procesar la respuesta JSON
+                DataTable jsonResponse = (DataTable)JsonConvert.DeserializeObject(response, typeof(DataTable));
+                DGVCanchas.DataSource = jsonResponse;
+            }
+        }
         private void FrmAdministrarcancha1_Load(object sender, EventArgs e)
         {
             using (WebClient client = new WebClient())
@@ -47,7 +61,7 @@ namespace ProyectoFinalBladimir
 
 
             }
-
+         
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -60,7 +74,53 @@ namespace ProyectoFinalBladimir
 
         private void button2_Click(object sender, EventArgs e)
         {
+            FrmEditarCancha f = new FrmEditarCancha();
+            string idcancha = DGVCanchas.CurrentRow.Cells["idCanchas"].Value.ToString();
+            string Nombre = DGVCanchas.CurrentRow.Cells["nombreCancha"].Value.ToString();
+            string dis = "";
+            dis = DGVCanchas.CurrentRow.Cells["disponibilidad"].Value.ToString();
+            if(dis == "0")
+            {
+                dis = "1";
+            }
+            else
+            {
+                if (dis == "1")
+                {
+                    dis = "0";
+
+                }
+            }
             
+            using (WebClient client = new WebClient())
+            {
+                // Construir la URL con los parámetros de consulta
+
+                string response = client.UploadString("http://soccersoft.somee.com/EditarDisponibilidad?idCancha="+idcancha+"&disponibilidad="+dis, "PUT", "");
+
+                // Realizar la solicitud HTTP DELETE
+                dynamic jsonResponse = JsonConvert.DeserializeObject(response);
+
+                DialogResult rpta = new DialogResult();
+                rpta = MessageBox.Show("Desea Cambiar la disponibilidad de: " + Nombre, "Advertencia!!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                // Verificar si el inicio de sesión fue exitoso
+                if (rpta == DialogResult.OK)
+                {
+                    if (jsonResponse[0].id == 200)
+                    {
+
+                        MessageBox.Show("Se ha cambiado la disponibilidad");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error");
+                    }
+                }
+
+
+            }
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
