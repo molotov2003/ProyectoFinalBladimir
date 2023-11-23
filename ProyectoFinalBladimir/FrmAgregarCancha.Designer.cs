@@ -35,29 +35,35 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Txtprecio = new System.Windows.Forms.TextBox();
             this.Txtdes = new System.Windows.Forms.TextBox();
-            this.Txtimagen = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Txtdis = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PbImage = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Txtimagen = new System.Windows.Forms.TextBox();
+            this.Cbxdis = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // AgregarCancha
             // 
+            this.AgregarCancha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AgregarCancha.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.AgregarCancha.Location = new System.Drawing.Point(339, 372);
             this.AgregarCancha.Name = "AgregarCancha";
             this.AgregarCancha.Size = new System.Drawing.Size(107, 34);
             this.AgregarCancha.TabIndex = 0;
             this.AgregarCancha.Text = "Agregar";
-            this.AgregarCancha.UseVisualStyleBackColor = true;
+            this.AgregarCancha.UseVisualStyleBackColor = false;
             this.AgregarCancha.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(196, 144);
             this.label7.Name = "label7";
@@ -75,6 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(200, 230);
             this.label4.Name = "label4";
@@ -96,16 +103,10 @@
             this.Txtdes.Size = new System.Drawing.Size(238, 22);
             this.Txtdes.TabIndex = 34;
             // 
-            // Txtimagen
-            // 
-            this.Txtimagen.Location = new System.Drawing.Point(306, 224);
-            this.Txtimagen.Name = "Txtimagen";
-            this.Txtimagen.Size = new System.Drawing.Size(238, 22);
-            this.Txtimagen.TabIndex = 33;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(200, 267);
             this.label6.Name = "label6";
@@ -116,6 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(200, 183);
             this.label3.Name = "label3";
@@ -126,6 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(289, 39);
@@ -137,19 +140,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(200, 313);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 16);
             this.label2.TabIndex = 42;
             this.label2.Text = "Disponibilidad";
-            // 
-            // Txtdis
-            // 
-            this.Txtdis.Location = new System.Drawing.Point(306, 307);
-            this.Txtdis.Name = "Txtdis";
-            this.Txtdis.Size = new System.Drawing.Size(238, 22);
-            this.Txtdis.TabIndex = 40;
             // 
             // pictureBox2
             // 
@@ -164,15 +161,57 @@
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
             // 
+            // PbImage
+            // 
+            this.PbImage.BackColor = System.Drawing.Color.Transparent;
+            this.PbImage.Location = new System.Drawing.Point(611, 183);
+            this.PbImage.Name = "PbImage";
+            this.PbImage.Size = new System.Drawing.Size(133, 133);
+            this.PbImage.TabIndex = 44;
+            this.PbImage.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(611, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 35);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Cargar imagen";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Txtimagen
+            // 
+            this.Txtimagen.Location = new System.Drawing.Point(306, 224);
+            this.Txtimagen.Name = "Txtimagen";
+            this.Txtimagen.Size = new System.Drawing.Size(238, 22);
+            this.Txtimagen.TabIndex = 33;
+            // 
+            // Cbxdis
+            // 
+            this.Cbxdis.FormattingEnabled = true;
+            this.Cbxdis.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.Cbxdis.Location = new System.Drawing.Point(306, 313);
+            this.Cbxdis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Cbxdis.Name = "Cbxdis";
+            this.Cbxdis.Size = new System.Drawing.Size(239, 24);
+            this.Cbxdis.TabIndex = 73;
+            // 
             // FrmAgregarCancha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Cbxdis);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PbImage);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Txtdis);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtNombreCancha);
             this.Controls.Add(this.label4);
@@ -187,6 +226,7 @@
             this.Name = "FrmAgregarCancha";
             this.Text = "FrmAgregarCancha";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,12 +240,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Txtprecio;
         private System.Windows.Forms.TextBox Txtdes;
-        private System.Windows.Forms.TextBox Txtimagen;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Txtdis;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PbImage;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Txtimagen;
+        public System.Windows.Forms.ComboBox Cbxdis;
     }
 }

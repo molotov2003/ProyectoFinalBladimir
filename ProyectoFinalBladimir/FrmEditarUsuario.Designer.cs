@@ -62,27 +62,32 @@
             // 
             // BtnSalir
             // 
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(690, 404);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(100, 36);
             this.BtnSalir.TabIndex = 69;
             this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnAgregar.Location = new System.Drawing.Point(350, 354);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(100, 36);
             this.BtnAgregar.TabIndex = 68;
             this.BtnAgregar.Text = "Editar";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(177, 310);
             this.label5.Name = "label5";
@@ -101,6 +106,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(177, 264);
             this.label7.Name = "label7";
@@ -118,6 +124,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(181, 187);
             this.label4.Name = "label4";
@@ -149,6 +156,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(181, 224);
             this.label6.Name = "label6";
@@ -159,6 +167,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(181, 140);
             this.label3.Name = "label3";
@@ -169,6 +178,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(279, 11);
@@ -181,7 +191,7 @@
             // 
             this.CbxRol.FormattingEnabled = true;
             this.CbxRol.Items.AddRange(new object[] {
-            "0,",
+            "0",
             "1"});
             this.CbxRol.Location = new System.Drawing.Point(287, 302);
             this.CbxRol.Name = "CbxRol";
@@ -194,6 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.CbxRol);
             this.Controls.Add(this.pictureBox2);

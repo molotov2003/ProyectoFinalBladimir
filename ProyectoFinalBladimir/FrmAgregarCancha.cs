@@ -24,7 +24,7 @@ namespace ProyectoFinalBladimir
             try
             {
                 // Validar si los campos de usuario y contraseña están llenos
-                if (TxtNombreCancha.Text.Length > 0 && Txtdes.Text.Length > 0 && Txtimagen.Text.Length > 0 && Txtprecio.Text.Length > 0 && Txtdis.Text  .Length > 0)
+                if (TxtNombreCancha.Text.Length > 0 && Txtdes.Text.Length > 0 && Txtimagen.Text.Length > 0 && Txtprecio.Text.Length > 0 && Cbxdis.Text.Length > 0)
                 {
 
                     // Realizar la solicitud HTTP POST al servicio de inicio de sesión
@@ -33,8 +33,8 @@ namespace ProyectoFinalBladimir
 
 
                         // Realizar la solicitud HTTP POST
-                        string response = client.UploadString("http://soccersoft.somee.com/CrearCancha?nombreCancha="+TxtNombreCancha.Text+"&descripcionCancha="+Txtdes.Text+"&imagen="+Txtimagen.Text+"&precio="+Convert.ToInt64(Txtprecio.Text)+"&disponibilidad="+Convert.ToInt64(Txtdis.Text),"POST");
-
+                        string response = client.UploadString("http://soccersoft.somee.com/CrearCancha?nombreCancha="+TxtNombreCancha.Text+"&descripcionCancha="+Txtdes.Text+"&imagen="+Txtimagen.Text+ "&precio="+Convert.ToInt64(Txtprecio.Text)+"&disponibilidad="+Convert.ToInt64(Cbxdis.Text),"POST");
+                        
                         // Procesar la respuesta JSON
                         dynamic jsonResponse = JsonConvert.DeserializeObject(response);
 
@@ -62,6 +62,19 @@ namespace ProyectoFinalBladimir
             {
                 MessageBox.Show("debe llenar todos los campos");
             }
+        }
+
+        public void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog fo = new OpenFileDialog();
+            if(fo.ShowDialog()== DialogResult.OK)
+            {
+                PbImage.ImageLocation  =  fo.FileName;
+                PbImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
+         
+            
         }
     }
 }

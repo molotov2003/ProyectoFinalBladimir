@@ -55,6 +55,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(230, 235);
             this.label4.Name = "label4";
@@ -64,12 +65,14 @@
             // 
             // BtnEditar
             // 
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnEditar.Location = new System.Drawing.Point(397, 367);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(100, 36);
             this.BtnEditar.TabIndex = 36;
             this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // TxtApellido
@@ -96,6 +99,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(230, 272);
             this.label6.Name = "label6";
@@ -106,6 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(230, 188);
             this.label3.Name = "label3";
@@ -116,6 +121,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(312, 47);
@@ -126,12 +132,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Location = new System.Drawing.Point(688, 402);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 36);
             this.button1.TabIndex = 40;
             this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
@@ -153,6 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);

@@ -42,17 +42,20 @@
             // 
             // BtnSalir
             // 
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(878, 550);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(107, 44);
             this.BtnSalir.TabIndex = 55;
             this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(322, 124);
@@ -63,32 +66,38 @@
             // 
             // BtnEditar
             // 
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnEditar.Location = new System.Drawing.Point(852, 368);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(107, 44);
             this.BtnEditar.TabIndex = 58;
             this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnEliminar
             // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.White;
             this.BtnEliminar.Location = new System.Drawing.Point(852, 297);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(107, 44);
             this.BtnEliminar.TabIndex = 59;
             this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnAgregar.Location = new System.Drawing.Point(852, 219);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(107, 44);
             this.BtnAgregar.TabIndex = 60;
             this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // pictureBox1
@@ -122,6 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(997, 596);
             this.Controls.Add(this.DGVUsuarios);
             this.Controls.Add(this.pictureBox1);

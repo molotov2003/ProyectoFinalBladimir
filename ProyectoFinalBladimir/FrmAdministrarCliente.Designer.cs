@@ -42,7 +42,8 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.Snow;
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnEliminar.Location = new System.Drawing.Point(844, 337);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(100, 37);
@@ -53,7 +54,8 @@
             // 
             // BtnEditar
             // 
-            this.BtnEditar.BackColor = System.Drawing.Color.Snow;
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnEditar.Location = new System.Drawing.Point(844, 393);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(100, 37);
@@ -64,7 +66,8 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.BackColor = System.Drawing.Color.Snow;
+            this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnAgregar.Location = new System.Drawing.Point(844, 281);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(100, 37);
@@ -76,6 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(315, 191);
@@ -86,7 +90,8 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Snow;
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(844, 636);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(100, 37);
@@ -128,6 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(985, 697);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BtnSalir);

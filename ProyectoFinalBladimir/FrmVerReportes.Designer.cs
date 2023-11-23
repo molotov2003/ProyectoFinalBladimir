@@ -45,8 +45,9 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Snow;
-            this.BtnSalir.Location = new System.Drawing.Point(895, 608);
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnSalir.Location = new System.Drawing.Point(922, 630);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(100, 37);
             this.BtnSalir.TabIndex = 29;
@@ -117,9 +118,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(294, 176);
+            this.label2.Location = new System.Drawing.Point(426, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 43);
             this.label2.TabIndex = 27;
@@ -143,6 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1034, 679);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BtnSalir);
