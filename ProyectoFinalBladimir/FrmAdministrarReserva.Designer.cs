@@ -112,9 +112,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(243, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 36);
+            this.label5.Size = new System.Drawing.Size(127, 36);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Cedula:";
+            this.label5.Text = "Telefono";
             // 
             // TxtCedula
             // 
@@ -130,6 +130,7 @@
             this.CbxCancha.Name = "CbxCancha";
             this.CbxCancha.Size = new System.Drawing.Size(230, 24);
             this.CbxCancha.TabIndex = 39;
+            this.CbxCancha.SelectedIndexChanged += new System.EventHandler(this.CbxCancha_SelectedIndexChanged);
             // 
             // DtpFecha
             // 
@@ -137,6 +138,7 @@
             this.DtpFecha.Name = "DtpFecha";
             this.DtpFecha.Size = new System.Drawing.Size(230, 22);
             this.DtpFecha.TabIndex = 40;
+            this.DtpFecha.ValueChanged += new System.EventHandler(this.DtpFecha_ValueChanged);
             // 
             // CbxHora
             // 
@@ -148,22 +150,25 @@
             // 
             // button1
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.Color.Snow;
             this.button1.Location = new System.Drawing.Point(505, 540);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 44);
             this.button1.TabIndex = 42;
             this.button1.Text = "Reservar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnSalir
             // 
+            this.BtnSalir.BackColor = System.Drawing.Color.Red;
             this.BtnSalir.Location = new System.Drawing.Point(932, 590);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(107, 44);
             this.BtnSalir.TabIndex = 43;
             this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // pictureBox2
@@ -203,6 +208,7 @@
             this.Name = "FrmAdministrarReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Reserva";
+            this.Load += new System.EventHandler(this.FrmAdministrarReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -30,24 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVerReservas));
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.DGVCanchas = new System.Windows.Forms.DataGridView();
-            this.NombreCancha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disponibilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGVReservas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).BeginInit();
+            this.BtnConfirmar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.BackColor = System.Drawing.Color.Red;
             this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(983, 597);
             this.BtnSalir.Name = "BtnSalir";
@@ -57,57 +52,16 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // DGVCanchas
+            // DGVReservas
             // 
-            this.DGVCanchas.AllowUserToOrderColumns = true;
-            this.DGVCanchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCanchas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreCancha,
-            this.Descripcion,
-            this.Precio,
-            this.Disponibilidad,
-            this.Asistencia});
-            this.DGVCanchas.Location = new System.Drawing.Point(12, 200);
-            this.DGVCanchas.Name = "DGVCanchas";
-            this.DGVCanchas.RowHeadersWidth = 51;
-            this.DGVCanchas.RowTemplate.Height = 24;
-            this.DGVCanchas.Size = new System.Drawing.Size(915, 380);
-            this.DGVCanchas.TabIndex = 20;
-            // 
-            // NombreCancha
-            // 
-            this.NombreCancha.HeaderText = "Cancha";
-            this.NombreCancha.MinimumWidth = 20;
-            this.NombreCancha.Name = "NombreCancha";
-            this.NombreCancha.Width = 170;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Fecha";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 160;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Hora";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 125;
-            // 
-            // Disponibilidad
-            // 
-            this.Disponibilidad.HeaderText = "Pago";
-            this.Disponibilidad.MinimumWidth = 6;
-            this.Disponibilidad.Name = "Disponibilidad";
-            this.Disponibilidad.Width = 125;
-            // 
-            // Asistencia
-            // 
-            this.Asistencia.HeaderText = "Asistencia";
-            this.Asistencia.MinimumWidth = 6;
-            this.Asistencia.Name = "Asistencia";
-            this.Asistencia.Width = 125;
+            this.DGVReservas.AllowUserToOrderColumns = true;
+            this.DGVReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVReservas.Location = new System.Drawing.Point(12, 200);
+            this.DGVReservas.Name = "DGVReservas";
+            this.DGVReservas.RowHeadersWidth = 51;
+            this.DGVReservas.RowTemplate.Height = 24;
+            this.DGVReservas.Size = new System.Drawing.Size(851, 380);
+            this.DGVReservas.TabIndex = 20;
             // 
             // label2
             // 
@@ -134,7 +88,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnEliminar.BackColor = System.Drawing.Color.Red;
             this.BtnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnEliminar.Location = new System.Drawing.Point(942, 231);
             this.BtnEliminar.Name = "BtnEliminar";
@@ -142,17 +96,7 @@
             this.BtnEliminar.TabIndex = 26;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BtnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnEditar.Location = new System.Drawing.Point(942, 316);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(100, 37);
-            this.BtnEditar.TabIndex = 27;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // pictureBox2
             // 
@@ -167,6 +111,18 @@
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
+            // BtnConfirmar
+            // 
+            this.BtnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnConfirmar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnConfirmar.Location = new System.Drawing.Point(942, 327);
+            this.BtnConfirmar.Name = "BtnConfirmar";
+            this.BtnConfirmar.Size = new System.Drawing.Size(100, 37);
+            this.BtnConfirmar.TabIndex = 29;
+            this.BtnConfirmar.Text = "Confirmar";
+            this.BtnConfirmar.UseVisualStyleBackColor = false;
+            this.BtnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
+            // 
             // FrmVerReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,18 +130,19 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1141, 646);
+            this.Controls.Add(this.BtnConfirmar);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.DGVCanchas);
+            this.Controls.Add(this.DGVReservas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVerReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVerReservas";
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).EndInit();
+            this.Load += new System.EventHandler(this.FrmVerReservas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,16 +152,11 @@
         #endregion
 
         private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.DataGridView DGVCanchas;
+        private System.Windows.Forms.DataGridView DGVReservas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCancha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibilidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencia;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button BtnConfirmar;
     }
 }

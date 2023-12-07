@@ -34,16 +34,16 @@
             this.BtnEditar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.DGVCanchas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).BeginInit();
+            this.DGVCanchas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.BackColor = System.Drawing.Color.Red;
             this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(841, 538);
             this.BtnSalir.Name = "BtnSalir";
@@ -101,19 +101,6 @@
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // DGVCanchas
-            // 
-            this.DGVCanchas.AllowUserToAddRows = false;
-            this.DGVCanchas.AllowUserToDeleteRows = false;
-            this.DGVCanchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCanchas.Location = new System.Drawing.Point(54, 215);
-            this.DGVCanchas.Name = "DGVCanchas";
-            this.DGVCanchas.ReadOnly = true;
-            this.DGVCanchas.RowHeadersWidth = 51;
-            this.DGVCanchas.RowTemplate.Height = 24;
-            this.DGVCanchas.Size = new System.Drawing.Size(769, 380);
-            this.DGVCanchas.TabIndex = 21;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -140,6 +127,19 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // DGVCanchas
+            // 
+            this.DGVCanchas.AllowUserToAddRows = false;
+            this.DGVCanchas.AllowUserToDeleteRows = false;
+            this.DGVCanchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVCanchas.Location = new System.Drawing.Point(54, 215);
+            this.DGVCanchas.Name = "DGVCanchas";
+            this.DGVCanchas.ReadOnly = true;
+            this.DGVCanchas.RowHeadersWidth = 51;
+            this.DGVCanchas.RowTemplate.Height = 24;
+            this.DGVCanchas.Size = new System.Drawing.Size(769, 380);
+            this.DGVCanchas.TabIndex = 21;
+            // 
             // FrmAdministrarcancha1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,8 +160,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdministrarcancha1";
             this.Load += new System.EventHandler(this.FrmAdministrarcancha1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,8 +174,8 @@
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.DataGridView DGVCanchas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView DGVCanchas;
     }
 }
