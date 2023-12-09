@@ -37,7 +37,7 @@ namespace ProyectoFinalBladimir
             public string Nombre { get; set; }
             public override string ToString()
             {
-                return Nombre; // Esto es lo que se mostrará en el ComboBox
+                return Nombre; 
             }
         }
 
@@ -47,7 +47,7 @@ namespace ProyectoFinalBladimir
             public string Hora { get; set; }
             public override string ToString()
             {
-                return Hora; // Esto es lo que se mostrará en el ComboBox
+                return Hora; 
             }
         }
         private int idSeleccionadoGlobal;

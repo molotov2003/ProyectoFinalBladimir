@@ -30,22 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVerReportes));
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.DGVCanchas = new System.Windows.Forms.DataGridView();
-            this.NombreCancha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disponibilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cancelar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BtnFechas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.BackColor = System.Drawing.Color.Red;
             this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(922, 630);
             this.BtnSalir.Name = "BtnSalir";
@@ -54,66 +48,6 @@
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // DGVCanchas
-            // 
-            this.DGVCanchas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCanchas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreCancha,
-            this.Descripcion,
-            this.Precio,
-            this.Disponibilidad,
-            this.Cancelar,
-            this.Editar});
-            this.DGVCanchas.Location = new System.Drawing.Point(27, 222);
-            this.DGVCanchas.Name = "DGVCanchas";
-            this.DGVCanchas.RowHeadersWidth = 51;
-            this.DGVCanchas.RowTemplate.Height = 24;
-            this.DGVCanchas.Size = new System.Drawing.Size(935, 380);
-            this.DGVCanchas.TabIndex = 28;
-            this.DGVCanchas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCanchas_CellContentClick);
-            // 
-            // NombreCancha
-            // 
-            this.NombreCancha.HeaderText = "Cancha";
-            this.NombreCancha.MinimumWidth = 20;
-            this.NombreCancha.Name = "NombreCancha";
-            this.NombreCancha.Width = 190;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 190;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 125;
-            // 
-            // Disponibilidad
-            // 
-            this.Disponibilidad.HeaderText = "Disponibilidad";
-            this.Disponibilidad.MinimumWidth = 6;
-            this.Disponibilidad.Name = "Disponibilidad";
-            this.Disponibilidad.Width = 125;
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.HeaderText = "Reporte";
-            this.Cancelar.MinimumWidth = 6;
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Width = 125;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Fecha";
-            this.Editar.MinimumWidth = 6;
-            this.Editar.Name = "Editar";
-            this.Editar.Width = 125;
             // 
             // label2
             // 
@@ -140,6 +74,30 @@
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(829, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 42);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Reporte general";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnFechas
+            // 
+            this.BtnFechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnFechas.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.BtnFechas.Location = new System.Drawing.Point(829, 385);
+            this.BtnFechas.Name = "BtnFechas";
+            this.BtnFechas.Size = new System.Drawing.Size(122, 42);
+            this.BtnFechas.TabIndex = 33;
+            this.BtnFechas.Text = "Generar Reporte Por Fechas";
+            this.BtnFechas.UseVisualStyleBackColor = false;
+            this.BtnFechas.Click += new System.EventHandler(this.BtnFechas_Click);
+            // 
             // FrmVerReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,15 +105,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1034, 679);
+            this.Controls.Add(this.BtnFechas);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.DGVCanchas);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVerReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVerReportes";
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCanchas)).EndInit();
+            this.Load += new System.EventHandler(this.FrmVerReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,14 +123,9 @@
 
         #endregion
         private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.DataGridView DGVCanchas;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCancha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibilidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cancelar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Editar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnFechas;
     }
 }

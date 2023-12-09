@@ -44,7 +44,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(235, 82);
+            this.label3.Location = new System.Drawing.Point(248, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(317, 43);
             this.label3.TabIndex = 31;
@@ -56,7 +56,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(201, 172);
+            this.label1.Location = new System.Drawing.Point(214, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 32;
@@ -68,7 +68,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(203, 257);
+            this.label2.Location = new System.Drawing.Point(216, 245);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 33;
@@ -76,30 +76,31 @@
             // 
             // DtpFechainicio
             // 
-            this.DtpFechainicio.Location = new System.Drawing.Point(354, 175);
+            this.DtpFechainicio.Location = new System.Drawing.Point(367, 163);
             this.DtpFechainicio.Name = "DtpFechainicio";
             this.DtpFechainicio.Size = new System.Drawing.Size(200, 22);
             this.DtpFechainicio.TabIndex = 34;
             // 
             // DtpFechaFin
             // 
-            this.DtpFechaFin.Location = new System.Drawing.Point(354, 259);
+            this.DtpFechaFin.Location = new System.Drawing.Point(367, 247);
             this.DtpFechaFin.Name = "DtpFechaFin";
             this.DtpFechaFin.Size = new System.Drawing.Size(200, 22);
             this.DtpFechaFin.TabIndex = 35;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(379, 342);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(392, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 28);
             this.button1.TabIndex = 36;
             this.button1.Text = "Ver Reporte";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnSalir.BackColor = System.Drawing.Color.Red;
             this.BtnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnSalir.Location = new System.Drawing.Point(674, 391);
             this.BtnSalir.Name = "BtnSalir";
