@@ -19,10 +19,12 @@ namespace ProyectoFinalBladimir
     {
         ClaseUsuarios ClaseUsuarios = new ClaseUsuarios();
 
-        public static string excepcion = "Usuario o contrfffffffffffaseña incorrecta";
+        public static string excepcion = "Usuario o contraseña incorrecta";
+
         public Inicio_sesion()
         {
             InitializeComponent();
+            Txtpass.PasswordChar = '*';
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -112,6 +114,14 @@ namespace ProyectoFinalBladimir
                     MessageBox.Show("Error: Usuario o contraseña incorrecta" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

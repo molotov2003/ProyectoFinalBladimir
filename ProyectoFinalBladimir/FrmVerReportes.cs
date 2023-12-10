@@ -1,12 +1,12 @@
 ﻿using ClosedXML.Excel;
-using LiveCharts.Definitions.Charts;
-using LiveCharts;
+
 using Newtonsoft.Json;
 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -98,9 +98,19 @@ namespace ProyectoFinalBladimir
                         }
                         fila++;
                     }
-
+                   
                     // Guardar el archivo Excel en la ruta especificada
                     workbook.SaveAs(rutaArchivo);
+                 
+                    
+                    if (File.Exists(rutaArchivo))
+                    {
+                        Process.Start(rutaArchivo);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El archivo no existe en la ruta especificada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }
@@ -108,18 +118,7 @@ namespace ProyectoFinalBladimir
 
         private void FrmVerReportes_Load(object sender, EventArgs e)
         {
-            using (WebClient client = new WebClient())
-            {
-                // Construir la URL con los parámetros de consulta
-                string url = $"http://soccersoft.somee.com/ReservasCanchas";
-
-                // Realizar la solicitud HTTP GET
-                string response = client.DownloadString(url);
-                var datos = JsonConvert.DeserializeObject<List<double>>(response);
-                
-
-
-            }
+           
         }
 
         private void BtnFechas_Click(object sender, EventArgs e)
